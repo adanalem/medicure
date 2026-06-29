@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <title> Medicure </title>
+</head>
+<body>
+  <!--  Navbar -->
+<nav class="relative w-full px-6 py-4 bg-white border-b border-stone-200 shadow-sm flex flex-wrap items-center justify-between">
+    
+    <!-- Brand Logo Section -->
+    <div class="flex items-center">
+        <img src="images/Screenshot 2026-06-23 201939.png" alt="Logo" class="w-12 h-12 rounded-sm object-cover mr-3 border border-stone-200 shadow-sm">
+        <h1 class="text-2xl font-serif font-semibold text-stone-900 tracking-tight"> 
+            <span class="text-emerald-700 text-3xl font-bold">M</span>edicure 
+        </h1>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-button" class="text-stone-700 md:hidden text-sm uppercase tracking-wider font-serif border border-stone-300 px-4 py-2 rounded-sm hover:bg-stone-50 cursor-pointer transition-colors duration-300"> 
+        Menu 
+    </button>
+
+    <!-- Navigation Links Container -->
+    <div id="nav-link" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto text-base gap-1 md:gap-2 p-6 md:p-0 absolute md:static top-[100%] left-0 bg-white md:bg-transparent border-t border-stone-100 md:border-none z-50">
+        
+        <a href="#" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Home</a>
+        
+        <!-- Smooth Scroll Links matching your About section -->
+        <a href="#about" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">About</a>
+        <a href="#services" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Services</a>
+        <a href="contact.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Contact</a>
+        
+        <!-- Premium Action Button -->
+        <a href="#appointment" class="mt-4 md:mt-0 text-white text-sm uppercase tracking-widest font-serif py-2.5 px-6 bg-emerald-800 hover:bg-emerald-900 rounded-sm shadow-md transition-all duration-200 ml-2"> 
+            Appointments 
+        </a>
+    </div>
+</nav>
+<!-- 1. HERO SECTION:  -->
+<section id="home" data-aos="fade-up" class="w-full min-h-[85vh] flex flex-col md:flex-row items-center justify-between px-8 py-20 md:px-24 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white relative overflow-hidden">
+    
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Left Content Box -->
+    <div class="md:w-1/2 space-y-8 z-10">
+        <span class="text-xs uppercase tracking-widest text-amber-400 font-bold bg-amber-500/10 border border-amber-500/30 px-4 py-1.5 rounded-sm inline-block">
+            Welcome to Medicure
+        </span>
+        <h1 class="text-4xl md:text-6xl font-serif font-medium leading-tight text-white">
+            Your Health, <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-emerald-300 to-amber-300 italic font-normal">
+                Our Absolute Priority
+            </span>
+        </h1>
+        <p class="text-stone-300 font-sans leading-relaxed max-w-xl text-base md:text-lg">
+            We provide world-class healthcare services with experienced doctors and modern technology. Your health is our priority.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 pt-2"> 
+            <button class="px-8 py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white text-xs uppercase tracking-widest font-serif rounded-sm hover:from-emerald-700 hover:to-emerald-800 shadow-lg shadow-emerald-900/40 transition-all duration-300 cursor-pointer font-bold">
+              <a href="#appointment" >  Book an Appointment </a>    
+            </button>
+            <button class="px-8 py-3.5 bg-transparent border border-stone-500 text-stone-200 text-xs uppercase tracking-widest font-serif rounded-sm hover:bg-white/5 hover:text-white transition-all duration-300 cursor-pointer">
+                Learn More
+            </button>
+        </div>
+    </div>
+
+    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center z-10">
+        <div class="relative p-2 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md border border-white/20 shadow-2xl rounded-2xl max-w-md transform md:rotate-2 hover:rotate-0 transition-transform duration-500">
+            <div class="absolute -top-3 -left-3 bg-amber-500 text-slate-950 font-serif text-xs px-3 py-1 font-bold shadow-md rounded-sm">Premium Care</div>
+            
+            <img src="images/Screenshot 2026-06-23 205738.png" class="w-full h-auto object-contain rounded-xl shadow-inner" alt="Doctor">
+        </div>
+    </div>
+</section>
+
+<!-- 2. WHY CHOOSE US SECTION: -->
+<section id="services" class="bg-[#0b0f19] py-24 px-6 relative overflow-hidden border-t border-slate-800">
+    
+    <!-- Background Design Accent Elements -->
+    <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Section Header -->
+    <div class="text-center mb-20" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-5 py-2 rounded-full inline-block">
+            Why Choose Us
+        </span>
+        <h2 class="text-3xl md:text-5xl font-serif font-medium text-white mt-5 tracking-tight">
+            Our Healthcare Excellence
+        </h2>
+        <div class="w-20 h-0.5 bg-amber-400 mx-auto mt-5"></div> 
+    </div>
+
+    <!-- 3-Column Luxury Cards -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+        
+        <!-- Card 1 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="group bg-[#131926] border border-slate-800/80 p-8 rounded-xl shadow-xl hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-950/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+            <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-sm inline-block mb-6">
+                    Emergency
+                </span>
+                <!-- Image with clean native layout -->
+                <img src="images/Screenshot 2026-06-23 213232.png" alt="" class="mb-6 w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110">
+                <h4 class="text-xl font-serif font-medium text-white mb-3 group-hover:text-emerald-300 transition-colors">24 Hour Service</h4>
+                <p class="text-sm text-slate-400 font-sans leading-relaxed">We are here to provide you with round-the-clock medical care and immediate support when you need it most.</p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-slate-800/60 flex items-center text-xs font-serif uppercase tracking-widest text-amber-400 group-hover:text-amber-300 transition-colors cursor-pointer">
+                Learn More <span class="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="group bg-[#131926] border border-slate-800/80 p-8 rounded-xl shadow-xl hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-950/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+            <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-sm inline-block mb-6">
+                    Experience
+                </span>
+                <img src="images/Screenshot 2026-06-23 213941.png" alt="" class="mb-6 w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110">
+                <h4 class="text-xl font-serif font-medium text-white mb-3 group-hover:text-emerald-300 transition-colors">15+ Years Experience</h4>
+                <p class="text-sm text-slate-400 font-sans leading-relaxed">With over 15 years of operational excellence, we have a proven track record of treating complex conditions.</p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-slate-800/60 flex items-center text-xs font-serif uppercase tracking-widest text-amber-400 group-hover:text-amber-300 transition-colors cursor-pointer">
+                Our History <span class="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="group bg-[#131926] border border-slate-800/80 p-8 rounded-xl shadow-xl hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-950/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+            <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-sm inline-block mb-6">
+                    Guaranteed
+                </span>
+                <img src="images/Screenshot 2026-06-23 214214.png" alt="" class="mb-6 w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110">
+                <h4 class="text-xl font-serif font-medium text-white mb-3 group-hover:text-emerald-300 transition-colors">100% Satisfaction</h4>
+                <p class="text-sm text-slate-400 font-sans leading-relaxed">We are deeply committed to providing patient-centric treatment, ensuring comfort and premium healthcare services.</p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-slate-800/60 flex items-center text-xs font-serif uppercase tracking-widest text-amber-400 group-hover:text-amber-300 transition-colors cursor-pointer">
+                Read Reviews <span class="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    
+    
+    
+<!-- Main About Section  -->
+<section id="about" class="w-full py-20 bg-stone-50 text-gray-800 scroll-smooth">
+    
+    <!-- Top Header Layout -->
+    <div class="text-center mb-16 px-6" data-aos="fade-up">
+        <h1 class="text-xs uppercase tracking-widest text-emerald-700 font-semibold bg-emerald-50 border border-emerald-200 px-5 py-2 rounded-full inline-block shadow-sm">
+            About Us
+        </h1>
+        <h2 class="text-3xl md:text-5xl font-serif font-semibold text-stone-900 mt-4 tracking-tight">
+            Committed to Your Health and Well-being
+        </h2>
+        <div class="w-16 h-1 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Content Layout: -->
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Left Side:  -->
+        <div class="md:col-span-7 flex flex-col justify-center">
+            <span class="text-xs uppercase tracking-widest text-emerald-700 font-semibold mb-3">Our Mission</span>
+            
+            <h3 class="text-2xl font-serif font-semibold text-stone-900 mb-6 leading-tight">
+                Dedicated to Providing Exceptional Healthcare Services
+            </h3>
+            
+            <p class="text-base text-stone-600 leading-relaxed mb-4 font-sans">
+                At Medicure, we prioritize your health and well-being above all else. Our team of experienced medical professionals is committed to delivering personalized care, utilizing the latest medical advancements and technology. 
+            </p>
+            
+            <p class="text-base text-stone-600 leading-relaxed mb-8 font-sans">
+                We believe in a patient-centered approach, ensuring that every individual receives the attention and treatment they deserve. Your health is our top priority, and we strive to create a supportive and compassionate environment for all our patients.
+            </p>
+
+            <h4 class="text-xl font-serif italic text-emerald-800 border-l-4 border-emerald-600 pl-4 py-1 mb-8">
+                Our qualified team is ready to answer your questions!
+            </h4>
+
+            <!-- Styled Checkmark Features Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-stone-200">
+                <div class="flex items-center space-x-2 text-stone-700 font-serif italic">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>20+ years of excellence</span>
+                </div>
+                <div class="flex items-center space-x-2 text-stone-700 font-serif italic">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>24 Hours Medical Service</span>
+                </div>
+                <div class="flex items-center space-x-2 text-stone-700 font-serif italic">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>100% patient satisfaction</span>
+                </div>
+                <div class="flex items-center space-x-2 text-stone-700 font-serif italic">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>5000+ successful treatments</span>
+                </div>
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+    <a href="about.html" class="text-sm font-bold text-[#052e16]   bg-[#86efac] rounded-full p-3 hover:text-white hover:border border-black transition-colors">
+        Read More
+    </a>
+</button>
+            </div>
+            
+
+        </div>
+
+        <!-- Right Side: -->
+        <div class="md:col-span-5 flex justify-center">
+            <div class="relative p-3 bg-white border border-stone-200 shadow-xl rounded-sm max-w-sm transform hover:rotate-1 transition-transform duration-300">
+                <img src="images/Screenshot 2026-06-24 105237.png" alt="Doctor" class="w-full h-auto object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500">
+                <p class="text-center text-xs font-serif italic text-stone-500 mt-3 tracking-wide">Medicure Care Team</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- services -->
+<section id="services" class="w-full py-20 bg-stone-500 text-gray-800 scroll-smooth">
+    <div class="text-center mb-16 px-6" data-aos="fade-up">
+        <h1 class="text-xs uppercase tracking-widest text-emerald-700 font-semibold bg-emerald-50 border border-emerald-200 px-5 py-2 rounded-full inline-block shadow-sm">
+            Our Services
+        </h1>
+        <h2 class="text-3xl md:text-5xl font-serif font-semibold text-stone-900 mt-4 tracking-tight">
+            Comprehensive Healthcare Solutions
+        </h2>
+        <div class="w-16 h-1 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
+
+        <h3 class="text-xl font-serif italic text-white pl-4 py-1 mt-6">
+            Experienced in a variety of medical services </h3>
+
+
+
+            <!-- CARD 1: CARDIOLOGY -->
+<!-- Main Parent Grid Wrapper (Yeh pure layout ko 4 columns mein fit karega) -->
+<div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-12 relative z-10">
+        
+    <!-- CARD 1: CARDIOLOGY -->
+    <div class="w-full h-[400px] [perspective:1000px] group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+        <!-- Rotator Canvas -->
+        <div class="relative w-full h-full duration-700 ease-out transition-transform transform [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <!-- FRONT SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-[#131926] border border-slate-800/80 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] z-10 shadow-xl">
+                <div>
+                    <img src="images/Screenshot 2026-06-24 131547.png" alt="Cardiology" class="mb-5 w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110">
+                    <h4 class="text-xl font-serif font-medium text-white mb-1">Cardiology</h4>
+                    <p class="text-xs text-emerald-400 font-sans tracking-wider uppercase font-semibold">Heart Specialist</p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-serif uppercase tracking-widest text-amber-400">
+                    <a href="service.html" class="hover:underline">View details</a>
+                    <span>→</span>
+                </div>
+            </div>
+            <!-- BACK SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-emerald-500/30 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] shadow-2xl">
+                <div>
+                    <h4 class="text-base font-serif font-medium text-amber-300 mb-3 border-b border-slate-800/60 pb-2">Cardiovascular Excellence</h4>
+                    <p class="text-xs text-slate-300 font-sans leading-relaxed">At Medicure, our dedicated cardiology department offers advanced diagnostic and therapeutic care to protect your heart health.</p>
+                </div>
+                <!-- Action Buttons Styled Side-by-Side -->
+                <div class="flex flex-col gap-2 pt-3 border-t border-slate-800/60 text-[11px] font-serif uppercase tracking-wide">
+                    <div class="flex justify-between items-center text-emerald-400 hover:text-emerald-300">
+                        <a href="#appointment">Book Appointment</a>
+                        <span>→</span>
+                    </div>
+                    <div class="flex justify-between items-center text-stone-400 hover:text-white">
+                        <a href="service.html">Learn more</a>
+                        <span>→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 2: NEUROLOGY -->
+    <div class="w-full h-[400px] [perspective:1000px] group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+        <!-- Rotator Canvas -->
+        <div class="relative w-full h-full duration-700 ease-out transition-transform transform [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <!-- FRONT SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-[#131926] border border-slate-800/80 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] z-10 shadow-xl">
+                <div>
+                    <img src="images/Screenshot 2026-06-24 141816.png" alt="Neurology" class="mb-5 w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110">
+                    <h4 class="text-xl font-serif font-medium text-white mb-1">Neurology</h4>
+                    <p class="text-xs text-emerald-400 font-sans tracking-wider uppercase font-semibold">Brain Specialist</p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-serif uppercase tracking-widest text-amber-400">
+                    <a href="service.html" class="hover:underline">View details</a>
+                    <span>→</span>
+                </div>
+            </div>
+            <!-- BACK SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-emerald-500/30 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] shadow-2xl">
+                <div>
+                    <h4 class="text-base font-serif font-medium text-amber-300 mb-3 border-b border-slate-800/60 pb-2">Neurological Excellence</h4>
+                    <p class="text-xs text-slate-300 font-sans leading-relaxed">At Medicure, We provide expert care for complex conditions affecting your nervous system, offering advanced diagnostics and personalized treatment plans.</p>
+                </div>
+                <!-- Action Buttons Styled Side-by-Side -->
+                <div class="flex flex-col gap-2 pt-3 border-t border-slate-800/60 text-[11px] font-serif uppercase tracking-wide">
+                    <div class="flex justify-between items-center text-emerald-400 hover:text-emerald-300">
+                        <a href="#appointment">Book Appointment</a>
+                        <span>→</span>
+                    </div>
+                    <div class="flex justify-between items-center text-stone-400 hover:text-white">
+                        <a href="service.html">Learn more</a>
+                        <span>→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 3: DERMATOLOGY -->
+    <div class="w-full h-[400px] [perspective:1000px] group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+        <!-- Rotator Canvas -->
+        <div class="relative w-full h-full duration-700 ease-out transition-transform transform [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <!-- FRONT SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-[#131926] border border-slate-800/80 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] z-10 shadow-xl">
+                <div>
+                    <img src="images/Screenshot 2026-06-24 142028.png" alt="Dermatology" class="mb-5 w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110">
+                    <h4 class="text-xl font-serif font-medium text-white mb-1">Dermatology</h4>
+                    <p class="text-xs text-emerald-400 font-sans tracking-wider uppercase font-semibold">Skin Specialist</p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-serif uppercase tracking-widest text-amber-400">
+                    <a href="service.html" class="hover:underline">View details</a>
+                    <span>→</span>
+                </div>
+            </div>
+            <!-- BACK SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-emerald-500/30 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] shadow-2xl">
+                <div>
+                    <h4 class="text-base font-serif font-medium text-amber-300 mb-3 border-b border-slate-800/60 pb-2">Dermatological Excellence</h4>
+                    <p class="text-xs text-slate-300 font-sans leading-relaxed">At Medicure, our dedicated dermatology department offers advanced care to protect your skin health, specializing in comprehensive skin screenings.</p>
+                </div>
+                <!-- Action Buttons Styled Side-by-Side -->
+                <div class="flex flex-col gap-2 pt-3 border-t border-slate-800/60 text-[11px] font-serif uppercase tracking-wide">
+                    <div class="flex justify-between items-center text-emerald-400 hover:text-emerald-300">
+                        <a href="#appointment">Book Appointment</a>
+                        <span>→</span>
+                    </div>
+                    <div class="flex justify-between items-center text-stone-400 hover:text-white">
+                        <a href="service.html">Learn more</a>
+                        <span>→</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <!-- card4 -->
+
+<div class="w-full h-[400px] [perspective:1000px] group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+        <!-- Rotator Canvas -->
+        <div class="relative w-full h-full duration-700 ease-out transition-transform transform [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <!-- FRONT SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-[#131926] border border-slate-800/80 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] z-10 shadow-xl">
+                <div>
+                    <img src="images/Screenshot 2026-06-24 142308.png" alt="Dermatology" class="mb-5 w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110">
+                    <h4 class="text-xl font-serif font-medium text-white mb-1">Pediatrics</h4>
+                    <p class="text-xs text-emerald-400 font-sans tracking-wider uppercase font-semibold"> Child Health Specialist </p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-serif uppercase tracking-widest text-amber-400">
+                    <a href="service.html" class="hover:underline">View details</a>
+                    <span>→</span>
+                </div>
+            </div>
+            <!-- BACK SIDE -->
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-emerald-500/30 p-6 rounded-xl flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] shadow-2xl">
+                <div>
+                    <h4 class="text-base font-serif font-medium text-amber-300 mb-3 border-b border-slate-800/60 pb-2">Pediatric Care</h4>
+                    <p class="text-xs text-slate-300 font-sans leading-relaxed">At Medicure, our dedicated pediatrics department offers comprehensive care for children, ensuring their health and well-being through specialized medical attention.</p>
+                </div>
+                <!-- Action Buttons Styled Side-by-Side -->
+                <div class="flex flex-col gap-2 pt-3 border-t border-slate-800/60 text-[11px] font-serif uppercase tracking-wide">
+                    <div class="flex justify-between items-center text-emerald-400 hover:text-emerald-300">
+                        <a href="#appointment">Book Appointment</a>
+                        <span>→</span>
+                    </div>
+                    <div class="flex justify-between items-center text-stone-400 hover:text-white">
+                        <a href="service.html">Learn more</a>
+                        <span>→</span>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+
+    </div>
+    
+
+</div>
+    </div>
+</section>
+
+
+<!-- appointment -->
+
+<!-- Main Form Section -->
+<section id="appointment" class="bg-[#111827] py-20 px-6 border-t border-slate-800">
+    <div class="max-w-xl mx-auto bg-[#131926] border border-slate-800/80 p-8 rounded-xl shadow-2xl relative" data-aos="fade-up">
+        
+        <h1 class="text-2xl font-serif text-[#4ade80] mb-2 font-medium">Book an Appointment</h1>
+        <p class="text-[#a3a3a3] text-xs font-sans mb-6">Fill the following form for your medical appointment schedule.</p>
+
+        <!-- FIX 2: Fixed form ID whitespace strings -->
+        <form id="appointmentForm" class="space-y-5 text-sans text-sm">
+            
+            <!-- Input: Name (FIX 3: Added required validation) -->
+            <div>
+                <label for="name" class="block mb-2 text-stone-400 text-xs uppercase tracking-wider">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" class="w-full bg-[#1e293b] border border-slate-700 rounded-sm p-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">           
+            </div>
+
+            <!-- Input: Specialization Dropdown -->
+            <div>
+                <label class="block text-stone-400 text-xs uppercase tracking-wider mb-2">Select Specialization</label>
+                <select id="departmentselect" required class="w-full bg-[#1e293b] border border-slate-700 rounded-sm p-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">
+                    <option value="" disabled selected>Choose Department</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="orthopedics">Orthopedics</option>
+                    <option value="endocrinologists">Endocrinologists</option>
+                    <option value="ophthalmology">Ophthalmology</option>
+                </select>
+            </div>
+            
+            <!-- Input: Date Picker -->
+            <div>
+                <label class="block text-stone-400 text-xs uppercase tracking-wider mb-2">Choose Date</label>
+                <input type="date" id="appointmentDate" required class="w-full bg-[#1e293b] border border-slate-700 rounded-sm p-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">
+            </div>
+
+            <!-- Animated Status Box (Controlled by JavaScript) -->
+            <div id="statusBox" class="hidden bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 p-3 text-xs rounded-sm text-center font-serif italic">
+                Slots are available for this date!
+            </div>
+
+            <!-- Submit Action Button -->
+            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xs uppercase tracking-widest font-serif font-bold rounded-sm shadow-lg transition-all duration-300 cursor-pointer">
+                Confirm Booking
+            </button>
+        </form>
+
+    </div>
+</section>
+
+
+<!-- testmonial -->
+ <section id="testimonials" class="bg-[#0b0f19] py-20 px-6 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
+        <h1 class="text-3xl md:text-5xl font-serif font-semibold text-white mb-4 tracking-tight">What Our Patients Say</h1>
+        <p class="text-stone-400 text-sm md:text-base mb-12">Hear from our satisfied patients about their experiences with Medicure's healthcare services.</p>
+
+        <!-- Testimonial Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial Card 1 -->
+            <div class="bg-[#131926] border border-slate-800/80 p-6 rounded-xl shadow-xl " data-aos="fade-up" data-aos-delay="100">
+                <p class="text-stone-400 text-sm leading-relaxed mb-4">"Medicure provided exceptional care during my treatment. The staff was professional and compassionate, making me feel at ease throughout the process."</p>
+                <div class="flex items-center">
+                    <img src="images/Screenshot 2026-06-24 210001.png" alt="Patient 1" class="w-12 h-12 rounded-full object-cover mr-3 border border-stone-200 shadow-sm">
+                    <div>
+                        <h4 class="text-white font-serif font-medium">Sara </h4>
+                        <p class="text-emerald-400 text-xs">Cardiology Patient</p>
+                    </div>  
+                    </div>
+            </div>
+
+
+       <!-- card2      -->
+            <div class="bg-[#131926] border border-slate-800/80 p-6 rounded-xl shadow-xl " data-aos="fade-up" data-aos-delay="200">
+                <p class="text-stone-400 text-sm leading-relaxed mb-4">"I had a wonderful experience at Medicure. The doctors were knowledgeable and attentive, and the facilities were top-notch. I highly recommend their services."</p>
+                <div class="flex items-center">
+                    <img src="images/Screenshot 2026-06-24 210157.png" alt="Patient 2" class="w-12 h-12 rounded-full object-cover mr-3 border border-stone-200 shadow-sm">
+                    <div>
+                        <h4 class="text-white font-serif font-medium">Jane Smith</h4>
+                        <p class="text-emerald-400 text-xs">Dermatology Patient</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- card3 -->
+            <div class="bg-[#131926] border border-slate-800/80 p-6 rounded-xl shadow-xl " data-aos="fade-up" data-aos-delay="300">
+                <p class="text-stone-400 text-sm leading-relaxed mb-4">"The team at Medicure went above and beyond to ensure my comfort and well-being. Their expertise and dedication to patient care are truly commendable."</p>
+                <div class="flex items-center">
+                    <img src="images/Screenshot 2026-06-24 210344.png" alt="Patient 3" class="w-12 h-12 rounded-full object-cover mr-3 border border-stone-200 shadow-sm">
+                    <div>
+                        <h4 class="text-white font-serif font-medium">Michael Johnson</h4>
+                        <p class="text-emerald-400 text-xs">Neurology Patient</p>
+                    </div>  
+                </div>
+            </div>
+
+
+            <!-- card4 -->
+             <div class="bg-[#131926] border border-slate-800/80 p-6 rounded-xl shadow-xl " data-aos="fade-up" data-aos-delay="400">
+                <p class="text-stone-400 text-sm leading-relaxed mb-4">"I am extremely satisfied with the care I received at Medicure. The staff was friendly, and the treatment was effective. I would definitely return for future healthcare needs."</p>
+                <div class="flex items-center">
+                    <img src="images/Screenshot 2026-06-24 211033.png" alt="Patient 4" class="w-12 h-12 rounded-full object-cover mr-3 border border-stone-200 shadow-sm">
+                    <div>
+                        <h4 class="text-white font-serif font-medium">Emily Davis</h4>
+                        <p class="text-emerald-400 text-xs">Orthopedics Patient</p>
+                    </div>
+            
+</div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+   <!-- Footer Section Container -->
+<footer class="bg-[#0b0f19] py-16 px-6 border-t border-slate-800/80">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-stone-400 font-sans">
+        
+        
+        <div class="flex flex-col items-center md:items-start space-y-4">
+            <div class="flex items-center space-x-3">
+                <img src="images/Screenshot 2026-06-23 201939.png" class="rounded-sm w-10 h-10 object-cover border border-slate-800" alt="Logo">
+                <h2 class="text-2xl font-serif font-medium text-white tracking-tight"> 
+                    <span class="text-emerald-400 text-3xl font-bold">M</span>edicure 
+                </h2>
+            </div>
+            <p class="text-xs text-slate-500 max-w-xs text-center md:text-left leading-relaxed">Providing world-class responsive medical care with trusted excellence.</p>
+        </div>
+
+        <!-- Column 2: Quick Links Navigation -->
+        <div class="flex flex-col items-center md:items-start space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1">Navigation</h4>
+            <div class="flex flex-col items-center md:items-start gap-2 text-sm text-slate-400">
+                <a href="#" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
+                <a href="#services" class="hover:text-emerald-400 transition-colors">Our Services</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Column 3: Legal & Support  -->
+        <div class="flex flex-col items-center md:items-start space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1">Legal</h4>
+            <div class="flex flex-col items-center md:items-start gap-2 text-sm text-slate-400">
+                <a href="#" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-emerald-400 transition-colors">Medical Disclaimer</a>
+            </div>
+        </div>
+
+        <!-- Column 4: Social Media & Branding -->
+        <div class="flex flex-col items-center md:items-end space-y-4">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1 md:text-right w-full">Connect With Us</h4>
+            
+            <!-- Styled Social Media SVG Icons Group -->
+            <div class="flex space-x-4">
+                <!-- Facebook -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Facebook">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Instagram">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <!-- Twitter (X) -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Twitter">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+
+            <!-- Heart Vector Icon and Copyright Group -->
+            <div class="flex flex-col items-center md:items-end space-y-2 pt-2">
+                <img src="images/Vector.png" alt="Heart Rate" class="w-12 h-auto opacity-40 filter invert">
+                <span class="text-[10px] text-slate-600 uppercase tracking-widest font-sans text-center md:text-right">&copy; 2026 Medicure. All Rights Reserved.</span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+
+<script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation 1 second tak chalegi
+            once: true      // Animation sirf aik baar hogi jab user scroll karega
+        });
+    </script>
+</body>
+</html>

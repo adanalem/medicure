@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title> Medicure </title>
+</head>
+<body>
+
+     <!--  Navbar -->
+<nav class="relative w-full px-6 py-4 bg-white border-b border-stone-200 shadow-sm flex flex-wrap items-center justify-between">
+    
+    <!-- Brand Logo Section -->
+    <div class="flex items-center">
+        <img src="images/Screenshot 2026-06-23 201939.png" alt="Logo" class="w-12 h-12 rounded-sm object-cover mr-3 border border-stone-200 shadow-sm">
+        <h1 class="text-2xl font-serif font-semibold text-stone-900 tracking-tight"> 
+            <span class="text-emerald-700 text-3xl font-bold">M</span>edicure 
+        </h1>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-button" class="text-stone-700 md:hidden text-sm uppercase tracking-wider font-serif border border-stone-300 px-4 py-2 rounded-sm hover:bg-stone-50 cursor-pointer transition-colors duration-300"> 
+        Menu 
+    </button>
+
+    <!-- Navigation Links Container -->
+    <div id="nav-link" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto text-base gap-1 md:gap-2 p-6 md:p-0 absolute md:static top-[100%] left-0 bg-white md:bg-transparent border-t border-stone-100 md:border-none z-50">
+        
+        <a href="index.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Home</a>
+        
+        
+        <a href="#" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">About</a>
+        <a href="service.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Services</a>
+        <a href="contact.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Contact</a>
+        
+        <!-- Action Button -->
+        <a href="appointment.html" class="mt-4 md:mt-0 text-white text-sm uppercase tracking-widest font-serif py-2.5 px-6 bg-emerald-800 hover:bg-emerald-900 rounded-sm shadow-md transition-all duration-200 ml-2"> 
+            Appointments 
+        </a>
+    </div>
+</nav>
+
+<!--  Hero Section -->
+<section class="bg-[#f8fafc] text-[#1e293b] font-sans antialiased overflow-hidden relative" >
+    
+    <!--  Container -->
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 pt-12" data-aos="fade-up" >
+        <div class="flex items-center gap-3">
+            <div class="p-2 bg-[#d1fae5] rounded-xl shadow-sm border border-emerald-200/50">
+                <img src="images/Vector.png" alt="Vector Icon" class="w-6 h-6 object-contain">
+            </div>
+            
+            <span class="text-xs font-semibold tracking-widest uppercase text-emerald-700 bg-emerald-100/60 px-3 py-1.5 rounded-full border border-emerald-200/40 font-mono">
+                About Us
+            </span>
+            
+            <!-- Elegant Divider -->
+            <div class="h-[1px] w-12 bg-emerald-200"></div>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 pt-8 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" data-aos="fade-up">
+        
+        <!-- Left Side: Text Content -->
+        <div class="lg:col-span-7 space-y-6" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 leading-[1.15] tracking-tight">
+                Our qualified team is  ready to 
+                
+                    <span class="block text-5xl md:text-6xl lg:text-7xl not-italic font-serif font-semibold text-emerald-950 mt-1">answer your</span>
+                
+                <span class="text-emerald-800 relative inline-block font-medium italic mt-1 md:mt-2">
+                    questions! </span>
+            </h1>
+            
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-xl font-normal pt-2 border-l-2 border-emerald-500 pl-4">
+                Our team of highly trained professionals can help you feel better quickly and easily by using the latest healing technologies.
+            </p>
+            
+            
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="appointment.html" class="px-6 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-medium text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    Book Appointment
+                </a>
+                <a href="#medical" class="px-6 py-3 border border-slate-300 hover:border-emerald-600 text-slate-700 hover:text-emerald-700 font-medium text-sm rounded-lg transition-all duration-300">
+                    Meet the Team
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="lg:col-span-5 flex justify-center lg:justify-end" data-aos="fade-up " >
+            <div class="relative group max-w-md w-full">
+                <!-- Decorative background glow -->
+                <div class="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                
+                <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-slate-100">
+                    <img src="images/Screenshot 2026-06-24 105237.png" alt="Team Overview" class="w-full h-auto rounded-xl object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Showcase Image (Full Width Banner Style) -->
+    <div class="w-full px-6 sm:px-8 max-w-7xl mx-auto pb-16" data-aos="fade-up" >
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200/60 bg-white p-2">
+            <img src="images/Iamge.png" alt="Team Showcase" class="w-full h-auto rounded-xl object-cover max-h-[450px]">
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Section -->
+<section class="bg-slate-400 py-20 px-6 sm:px-8" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs font-bold tracking-widest text-emerald-600 uppercase bg-emerald-100 px-3 py-1 rounded-full">
+                Our Process
+            </span>
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-900 mt-3">
+                How We Assist You
+            </h2>
+            <p class="text-slate-500 text-sm mt-2">
+                We follow a seamless step-by-step methodology to ensure you get the best health services.
+            </p>
+        </div>
+
+        
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full flex justify-center items-center font-mono text-3xl font-bold text-emerald-600/20 group-hover:text-emerald-600 transition-colors">01</div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold mb-6">🩺</div>
+                <h3 class="text-xl font-semibold text-slate-800 mb-3">Consultation</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas mattis eu quis amet.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full flex justify-center items-center font-mono text-3xl font-bold text-emerald-600/20 group-hover:text-emerald-600 transition-colors">02</div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold mb-6">📋</div>
+                <h3 class="text-xl font-semibold text-slate-800 mb-3">Diagnosis</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas mattis eu quis amet.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full flex justify-center items-center font-mono text-3xl font-bold text-emerald-600/20 group-hover:text-emerald-600 transition-colors">03</div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold mb-6">💊</div>
+                <h3 class="text-xl font-semibold text-slate-800 mb-3">Treatment Plan</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas mattis eu quis amet.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full flex justify-center items-center font-mono text-3xl font-bold text-emerald-600/20 group-hover:text-emerald-600 transition-colors">04</div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold mb-6">🧬</div>
+                <h3 class="text-xl font-semibold text-slate-800 mb-3">Care & Support</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas mattis eu quis amet.</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full flex justify-center items-center font-mono text-3xl font-bold text-emerald-600/20 group-hover:text-emerald-600 transition-colors">05</div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold mb-6">🧪</div>
+                <h3 class="text-xl font-semibold text-slate-800 mb-3">Lab Testing</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas mattis eu quis amet.</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full flex justify-center items-center font-mono text-3xl font-bold text-emerald-600/20 group-hover:text-emerald-600 transition-colors">06</div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold mb-6">🏥</div>
+                <h3 class="text-xl font-semibold text-slate-800 mb-3">Recovery</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas mattis eu quis amet.</p>
+            </div>
+
+        </div>
+    </div>
+   <!-- Main Health Banner Section -->
+<section class="bg-[#0f172a] py-16 px-6 sm:px-12 mt-7 shadow-lg" data-aos="fade-up" >
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 mt-10">
+        
+        <!-- Left Column: Content (Takes 60% width on Desktop) -->
+        <div class="w-full md:w-3/5 space-y-6">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl text-white font-bold font-serif leading-[1.15]">
+                Health is in your hands. <br>
+                <span class="text-emerald-400 font-sans text-3xl sm:text-4xl lg:text-5xl block mt-2 font-medium">
+                    The right care at the right time
+                </span>
+            </h1>
+            
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl font-sans">
+                Healthcare is one of the most important facets of our lives, and yet it is often taken for granted. We all know that we need to eat healthy and exercise regularly in order to maintain our health.
+            </p>
+
+            <!-- FIXED: Moved button inside content column and removed invalid nested <button> tag -->
+            <div class="pt-2">
+                <a href="appointment.html" class="inline-block text-white text-sm uppercase tracking-widest font-serif py-4 px-8 bg-emerald-600 hover:bg-emerald-700 rounded shadow-md transition-all duration-200">
+                    Appointment
+                </a>
+            </div>
+        </div>
+         
+        <!-- Right Column -->
+        <div class="w-full md:w-2/5 flex justify-center z-10">
+            <div class="relative w-full max-w-sm p-3 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md border border-white/10 shadow-2xl rounded-2xl transform md:rotate-3 hover:rotate-0 transition-transform duration-500 group">
+                
+                <!-- Premium Badge -->
+                <div class="absolute -top-3 -left-3 bg-amber-500 text-slate-950 font-serif text-[10px] tracking-widest uppercase px-3 py-1.5 font-bold shadow-lg rounded-md">
+                    Premium Care
+                </div>
+                
+                <!-- Image Wrapper  -->
+                <div class="overflow-hidden rounded-xl border-4 border-emerald-500/80 shadow-lg">
+                    <img src="images/Screenshot 2026-06-25 201818.png" 
+                         class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" 
+                         alt="Doctor Appointment">
+                </div>
+            </div>
+        </div>
+         
+    </div>
+</section>
+
+
+<!-- Premium Doctors Profile Grid Section -->
+<section class="bg-slate-900 py-24 px-6 sm:px-12 mt-10">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-emerald-400 font-sans text-xs tracking-[0.2em] uppercase font-bold block">
+                Our Specialists
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl text-white font-bold font-serif leading-tight">
+                World-Class Medical Minds
+            </h2>
+            <div class="h-1 w-12 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Professional Profile Grid -->
+        <div id="medical" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10" data-aos="fade-up">
+            
+            <!-- Card 1 -->
+            <div  class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-950/20 hover:border-emerald-500/30">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+                    <img src="images/dr-png-hero-section-683x1024.webp" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="Dr. Sarah Jenkins">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6 space-y-1">
+                    <span class="text-emerald-400 text-xs font-semibold tracking-wider uppercase font-sans">Cardiology</span>
+                    <h3 class="text-xl font-bold text-white font-serif tracking-wide">Dr. Sarah Jenkins</h3>
+                    <p class="text-slate-400 text-xs font-sans pt-1">Harvard Medical School Alumna</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-950/20 hover:border-emerald-500/30">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+                    <img src="images/new_doctor_fb-32abb9ba141c8223aadebce90782ac68.jpg" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="Dr. Matthew Vance">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6 space-y-1">
+                    <span class="text-emerald-400 text-xs font-semibold tracking-wider uppercase font-sans">Pediatrics</span>
+                    <h3 class="text-xl font-bold text-white font-serif tracking-wide">Dr. Matthew Vance</h3>
+                    <p class="text-slate-400 text-xs font-sans pt-1">14+ Years Clinical Experience</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-950/20 hover:border-emerald-500/30">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+                    <img src="images/What-is-the-Role-of-a-Primary-Care-Physician.jpg" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="Dr. Evelyn Thorne">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6 space-y-1">
+                    <span class="text-emerald-400 text-xs font-semibold tracking-wider uppercase font-sans">Neurology</span>
+                    <h3 class="text-xl font-bold text-white font-serif tracking-wide">Dr. Evelyn Thorne</h3>
+                    <p class="text-slate-400 text-xs font-sans pt-1">Chief of Neurological Research</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-950/20 hover:border-emerald-500/30">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+                    <img src="images/beautiful-young-female-doctor-looking-camera-office_1301-7807.avif" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="Dr. Amara Patel">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6 space-y-1">
+                    <span class="text-emerald-400 text-xs font-semibold tracking-wider uppercase font-sans">Dermatology</span>
+                    <h3 class="text-xl font-bold text-white font-serif tracking-wide">Dr. Amara Patel</h3>
+                    <p class="text-slate-400 text-xs font-sans pt-1">Board Certified Consultant</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-950/20 hover:border-emerald-500/30">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+                    <img src="images/images.jpg" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="Dr. Marcus Brody">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6 space-y-1">
+                    <span class="text-emerald-400 text-xs font-semibold tracking-wider uppercase font-sans">Orthopedics</span>
+                    <h3 class="text-xl font-bold text-white font-serif tracking-wide">Dr. Marcus Brody</h3>
+                    <p class="text-slate-400 text-xs font-sans pt-1">Sports Medicine Specialist</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-950/20 hover:border-emerald-500/30">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-slate-900">
+                    <img src="images/DMSc-Panel-Card-3-Set-1-How-to-Apply.jpg" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="Dr. Raymond Holt">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6 space-y-1">
+                    <span class="text-emerald-400 text-xs font-semibold tracking-wider uppercase font-sans">Internal Medicine</span>
+                    <h3 class="text-xl font-bold text-white font-serif tracking-wide">Dr. Raymond Holt</h3>
+                    <p class="text-slate-400 text-xs font-sans pt-1">Senior Medical Advisor</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- footer -->
+ <footer class="bg-[#0b0f19] py-16 px-6 border-t border-slate-800/80">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-stone-400 font-sans">
+        
+        
+        <div class="flex flex-col items-center md:items-start space-y-4">
+            <div class="flex items-center space-x-3">
+                <img src="images/Screenshot 2026-06-23 201939.png" class="rounded-sm w-10 h-10 object-cover border border-slate-800" alt="Logo">
+                <h2 class="text-2xl font-serif font-medium text-white tracking-tight"> 
+                    <span class="text-emerald-400 text-3xl font-bold">M</span>edicure 
+                </h2>
+            </div>
+            <p class="text-xs text-slate-500 max-w-xs text-center md:text-left leading-relaxed">Providing world-class responsive medical care with trusted excellence.</p>
+        </div>
+
+        <!-- Column 2: Quick Links Navigation -->
+        <div class="flex flex-col items-center md:items-start space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1">Navigation</h4>
+            <div class="flex flex-col items-center md:items-start gap-2 text-sm text-slate-400">
+                <a href="#" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
+                <a href="#services" class="hover:text-emerald-400 transition-colors">Our Services</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Column 3: Legal & Support  -->
+        <div class="flex flex-col items-center md:items-start space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1">Legal</h4>
+            <div class="flex flex-col items-center md:items-start gap-2 text-sm text-slate-400">
+                <a href="#" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-emerald-400 transition-colors">Medical Disclaimer</a>
+            </div>
+        </div>
+
+        <!-- Column 4: Social Media & Branding -->
+        <div class="flex flex-col items-center md:items-end space-y-4">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1 md:text-right w-full">Connect With Us</h4>
+            
+            <!-- Styled Social Media SVG Icons Group -->
+            <div class="flex space-x-4">
+                <!-- Facebook -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Facebook">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Instagram">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <!-- Twitter (X) -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Twitter">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+
+            <!-- Heart Vector Icon and Copyright Group -->
+            <div class="flex flex-col items-center md:items-end space-y-2 pt-2">
+                <img src="images/Vector.png" alt="Heart Rate" class="w-12 h-auto opacity-40 filter invert">
+                <span class="text-[10px] text-slate-600 uppercase tracking-widest font-sans text-center md:text-right">&copy; 2026 Medicure. All Rights Reserved.</span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation 1 second tak chalegi
+            once: true      // Animation sirf aik baar hogi jab user scroll karega
+        });
+    </script>
+ 
+    
+</body>
+</html>

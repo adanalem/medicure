@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <title> Medicure </title>
+</head>
+<body>
+
+     <!--  Navbar -->
+<nav class="relative w-full px-6 py-4 bg-white border-b border-stone-200 shadow-sm flex flex-wrap items-center justify-between">
+    
+    <!-- Brand Logo Section -->
+    <div class="flex items-center">
+        <img src="images/Screenshot 2026-06-23 201939.png" alt="Logo" class="w-12 h-12 rounded-sm object-cover mr-3 border border-stone-200 shadow-sm">
+        <h1 class="text-2xl font-serif font-semibold text-stone-900 tracking-tight"> 
+            <span class="text-emerald-700 text-3xl font-bold">M</span>edicure 
+        </h1>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-button" class="text-stone-700 md:hidden text-sm uppercase tracking-wider font-serif border border-stone-300 px-4 py-2 rounded-sm hover:bg-stone-50 cursor-pointer transition-colors duration-300"> 
+        Menu 
+    </button>
+
+    <!-- Navigation Links Container -->
+    <div id="nav-link" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto text-base gap-1 md:gap-2 p-6 md:p-0 absolute md:static top-[100%] left-0 bg-white md:bg-transparent border-t border-stone-100 md:border-none z-50">
+        
+        <a href="index.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Home</a>
+        
+        
+        <a href="about.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">About</a>
+        <a href="service.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Services</a>
+        <a href="contact.html" class="text-stone-600 font-serif px-4 py-2 rounded-sm hover:text-emerald-700 hover:bg-stone-50 tracking-wide transition-all duration-200">Contact</a>
+        
+        <!-- Premium Action Button -->
+        <a href="#" class="mt-4 md:mt-0 text-white text-sm uppercase tracking-widest font-serif py-2.5 px-6 bg-emerald-800 hover:bg-emerald-900 rounded-sm shadow-md transition-all duration-200 ml-2"> 
+            Appointments 
+        </a>
+    </div>
+</nav>
+
+
+<!-- appointment -->
+
+<!-- Main Form Section -->
+<section id="appointment" class="bg-[#111827] py-20 px-6 border-t border-slate-800">
+    <div class="max-w-xl mx-auto bg-[#131926] border border-slate-800/80 p-8 rounded-xl shadow-2xl relative" data-aos="fade-up">
+        
+        <h1 class="text-2xl font-serif text-[#4ade80] mb-2 font-medium">Book an Appointment</h1>
+        <p class="text-[#a3a3a3] text-xs font-sans mb-6">Fill the following form for your medical appointment schedule.</p>
+
+        <!-- FIX 2: Fixed form ID whitespace strings -->
+        <form id="appointmentForm" class="space-y-5 text-sans text-sm">
+            
+            <!-- Input: Name (FIX 3: Added required validation) -->
+            <div>
+                <label for="name" class="block mb-2 text-stone-400 text-xs uppercase tracking-wider">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" class="w-full bg-[#1e293b] border border-slate-700 rounded-sm p-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">           
+            </div>
+
+            <!-- Input: Specialization Dropdown -->
+            <div>
+                <label class="block text-stone-400 text-xs uppercase tracking-wider mb-2">Select Specialization</label>
+                <select id="departmentselect" required class="w-full bg-[#1e293b] border border-slate-700 rounded-sm p-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">
+                    <option value="" disabled selected>Choose Department</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="orthopedics">Orthopedics</option>
+                    <option value="endocrinologists">Endocrinologists</option>
+                    <option value="ophthalmology">Ophthalmology</option>
+                </select>
+            </div>
+            
+            <!-- Input: Date Picker -->
+            <div>
+                <label class="block text-stone-400 text-xs uppercase tracking-wider mb-2">Choose Date</label>
+                <input type="date" id="appointmentDate" required class="w-full bg-[#1e293b] border border-slate-700 rounded-sm p-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">
+            </div>
+
+            <!-- Animated Status Box (Controlled by JavaScript) -->
+            <div id="statusBox" class="hidden bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 p-3 text-xs rounded-sm text-center font-serif italic">
+                Slots are available for this date!
+            </div>
+
+            <!-- Submit Action Button -->
+            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xs uppercase tracking-widest font-serif font-bold rounded-sm shadow-lg transition-all duration-300 cursor-pointer">
+                Confirm Booking
+            </button>
+        </form>
+
+    </div>
+</section>
+
+
+
+
+<!-- footer -->
+ <footer class="bg-[#0b0f19] py-16 px-6 border-t border-slate-800/80">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-stone-400 font-sans">
+        
+        
+        <div class="flex flex-col items-center md:items-start space-y-4">
+            <div class="flex items-center space-x-3">
+                <img src="images/Screenshot 2026-06-23 201939.png" class="rounded-sm w-10 h-10 object-cover border border-slate-800" alt="Logo">
+                <h2 class="text-2xl font-serif font-medium text-white tracking-tight"> 
+                    <span class="text-emerald-400 text-3xl font-bold">M</span>edicure 
+                </h2>
+            </div>
+            <p class="text-xs text-slate-500 max-w-xs text-center md:text-left leading-relaxed">Providing world-class responsive medical care with trusted excellence.</p>
+        </div>
+
+        <!-- Column 2: Quick Links Navigation -->
+        <div class="flex flex-col items-center md:items-start space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1">Navigation</h4>
+            <div class="flex flex-col items-center md:items-start gap-2 text-sm text-slate-400">
+                <a href="#" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
+                <a href="#services" class="hover:text-emerald-400 transition-colors">Our Services</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Column 3: Legal & Support  -->
+        <div class="flex flex-col items-center md:items-start space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1">Legal</h4>
+            <div class="flex flex-col items-center md:items-start gap-2 text-sm text-slate-400">
+                <a href="#" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-emerald-400 transition-colors">Medical Disclaimer</a>
+            </div>
+        </div>
+
+        <!-- Column 4: Social Media & Branding -->
+        <div class="flex flex-col items-center md:items-end space-y-4">
+            <h4 class="text-xs uppercase tracking-widest text-slate-400 font-bold font-serif mb-1 md:text-right w-full">Connect With Us</h4>
+            
+            <!-- Styled Social Media SVG Icons Group -->
+            <div class="flex space-x-4">
+                <!-- Facebook -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Facebook">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Instagram">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <!-- Twitter (X) -->
+                <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors" aria-label="Twitter">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+
+            <!-- Heart Vector Icon and Copyright Group -->
+            <div class="flex flex-col items-center md:items-end space-y-2 pt-2">
+                <img src="images/Vector.png" alt="Heart Rate" class="w-12 h-auto opacity-40 filter invert">
+                <span class="text-[10px] text-slate-600 uppercase tracking-widest font-sans text-center md:text-right">&copy; 2026 Medicure. All Rights Reserved.</span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+
+<script src="app.js"></script>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation 1 second tak chalegi
+            once: true      // Animation sirf aik baar hogi jab user scroll karega
+        });
+    </script>
+    
+</body>
+</html>
